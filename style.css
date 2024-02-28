@@ -207,3 +207,9 @@ aside p {
         margin: auto;
     }
 }
+
+footer {
+    background-color: #FBF5E6;
+    color: #5D1408;
+    text-align: center;
+}
