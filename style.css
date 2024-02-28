@@ -1,0 +1,209 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-weight: bold;
+}
+
+nav h1 {
+    margin-left: 2rem;
+    font-size: large;
+    color: #5D1408;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 5rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5D1408;
+}
+
+.searchbox {
+    width: 25rem;
+    background-color: #FBF5E6;
+    border-radius: 20px;
+}
+
+.searchbox i {
+    position: absolute;
+    padding-top: 7px;
+    padding-left: 12px;
+}
+
+.searchbox input {
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #FBF5E6;
+    margin-left: 1.5rem;
+}
+
+.searchbox textarea:focus, input:focus{
+    outline: none;
+}
+
+.hamburger-icon{
+    display:none;
+    border:none;
+    background-color:transparent;
+}
+
+.hamburger-icon input[type="checkbox"] {
+    appearance: none;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        display: block;
+        width: 100%;
+        margin-right: 5%;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .categories {
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+        padding: 0;
+    }
+
+    .searchbox {
+        width: 70%;
+    }
+
+    .searchbox i {
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+    
+    .uil-x{
+        display: none;
+    }
+    
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .categories {
+        height: fit-content;
+
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(4.1px);
+        border: 1px solid rgba(255, 255, 255, 0.27);
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .searchbox i {
+        display: block;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .uil-bars {
+        display:none;
+    }
+    
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .uil-x {
+        display:inline-block;
+    }
+
+}
+
+#headlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 1rem;
+}
+
+#headlist a {
+    text-decoration: none;
+    color: #c5561e;
+}
+
+#booklist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+#booklist img {
+    height: 210px;
+    width: 150px;
+    object-fit: contain;
+}
+
+.book {
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.book p {
+    white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+aside {
+    margin-top: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+
+}
+
+aside p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    aside {
+        width: 60%;
+        margin: auto;
+    }
+}
